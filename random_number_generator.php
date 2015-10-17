@@ -1,3 +1,17 @@
+<!--Script created by Nazmus at www.EasyProgramming.net -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+<body>
+    <div class="container">
+    <div class="row container">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        
+<h2>EP Random Password Generator</h2>
 <!--        HTML Form for end user - reloads on same page -->
 <form role="form" method="POST" action="<?php htmlentities($_SERVER["PHP_SELF"])?>">
     
@@ -25,23 +39,19 @@
 
 // Activates code block if submit button is clicked
     if(isset($_POST['submit'])){
-        // Checks to see if size of password is provided
+        // Checks the minimum value 
         if(isset($_POST['minnum'])){
             $minnum = $_POST['minnum'];
         }
-        // Checks to see if size of password is provided
+        // Checks the maximum value
         if(isset($_POST['maxnum'])){
             $maxnum = $_POST['maxnum'];
         }
-        // Checks to see if size of password is provided
+        // Checks the number of numbers to be generated
         if(isset($_POST['gennum'])){
             $gennum = $_POST['gennum'];
         }
-
-//        uses rand() function to generate a random number between min and max values
-//        $random_number = mt_rand($minnum,$maxnum);
 ?>
-        
 <!--Output in a pre tag - allowing it to be scrolled for large number generations-->
 <pre class="pre-scrollable"><?php 
     for($i=0;$i<$gennum;$i++)
@@ -50,10 +60,6 @@
         echo $random_number . "<br />";
     }
     ?></pre>
-
-  
-        <!--        Form input to display generated number - only appears if submitted -->
-<!--        <input class="form-control" type="text" size="50" value="">-->
 <?php
     }
 ?>
