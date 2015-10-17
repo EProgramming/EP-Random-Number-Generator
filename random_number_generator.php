@@ -11,7 +11,7 @@
     <div class="row container">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         
-<h2>EP Random Password Generator</h2>
+<h2>EP Random Number Generator</h2>
 <!--        HTML Form for end user - reloads on same page -->
 <form role="form" method="POST" action="<?php htmlentities($_SERVER["PHP_SELF"])?>">
     
